@@ -3,6 +3,10 @@
   margin:0;
   box-sizing:border-box;
 }
+body{
+  font-family: 'Poppins', sans-serif;
+  color:black;
+}
 section{
   display:flex;
   flex-direction:column;
@@ -13,12 +17,20 @@ section{
 padding:50px 0;
 
 }
+section#s1{
+  background: #6666a1;
+}
+section#s2{
+  background:rgb(29, 29, 82);
+}
 h2{
-  color:blue;
+  color:white;
   text-transform:capitalize;
   font-weight:bold;
   margin-bottom:50px;
   text-align: center;
+  text-shadow:1px 2px 2px black;
+  font-size:2.5rem;
 }
 form{
   width:50%;
@@ -26,19 +38,24 @@ form{
   display:flex;
   flex-direction:column;
   box-shadow:0px 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  padding:80px 0;
+  padding:80px 40px;
   border-radius:10px;
+  background:white;
 }
 .form-group{
   margin-bottom:20px;
   display:flex;
   flex-flow:row nowrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items:space-between;
+  width:70%;
+  margin:0 auto;
+  margin-bottom:10px;
 }
 label{
 font-size:1rem;
 text-transform:capitalize;
+color:black;
 width:230px;
 }
 input::-webkit-outer-spin-button,
@@ -50,7 +67,8 @@ input{
   height:30px;
   width:150px;
   padding:0 5px;
-  display:block;
+  display: inline-flex;
+  justify-content: flex-end;
 }
 select{
   width:150px;
@@ -89,12 +107,15 @@ button:hover{
   border-collapse: collapse;
   border-spacing:0;
   border:0.5px solid red;
+  background:white;
 }
 #table thead th{
   text-transform: uppercase;
   padding:0.5rem;
   text-align: center;
-  font-size:0.75rem; 
+  font-size:0.85rem; 
+  font-family: 'Roboto', sans-serif;
+  color:rgba(0, 0, 0, 0.93);
 }
 #table thead.output, .output{
   border:0.5px solid red;
@@ -104,7 +125,8 @@ text-align: center;
 padding:0.5rem 0.8rem;
 text-transform:capitalize;
 border:0.5px solid red;
-font-size:0.75rem;
+font-size:0.85rem;
+color:black;
 }
 #table tbody tr td:first-child{
   text-align:left;
@@ -136,8 +158,8 @@ font-size:0.75rem;
     margin-bottom:30px;
   }
   label{
-  font-size:0.8rem;
-  width:230px;
+  font-size:0.85rem;
+  width:180px;
   }
   #table{
     width:70%;
@@ -158,10 +180,11 @@ font-size:0.75rem;
   }
   .form-group{
     margin-bottom:20px;
+    width:90%;
   }
   label{
-  font-size:0.6rem;
-  width:150px;
+  font-size:0.85rem;
+  width:180px;
   }
   input, select{
     width:120px;
@@ -177,11 +200,11 @@ font-size:0.75rem;
     margin:0 auto;
   }
   #table thead th{
-    font-size:0.5rem;
+    font-size:0.6rem;
     padding:0.2rem 0.1rem;
   }
   #table tbody tr td{
     padding:0.2rem 0.1rem;
-    font-size:0.6rem;
+    font-size:0.8rem;
     }
 }

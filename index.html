@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Yes, the virus only kills a small percentage of those afflicted. Yes, the flu kills 10s of thousands of people annually. Yes, 80% of people will experience lightweight symptoms with COVID19. This app helps inthe adequate management of Covid19 and its implication on the economy.">
   <title>Covid-19 Estimator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,36 +17,30 @@
     <h2>
       Covid-19 Estimator App
     </h2>
-    <form action="POST">
+    <form action="/" method "POST">
       <div class="form-group">
-        <label for="population">population:
-        </label>
+        <label for="population">population:</label>
         <input id="population" data-population type="number" aria-required="true">
       </div>
       <div class="form-group">
-        <label for="timeToElapse">elapse time:
-        </label>
+        <label for="timeToElapse">elapse time:</label>
         <input id="timeToElapse" data-time-to-elapse type="number" aria-required="true">
       </div>
       <div class="form-group">
-        <label for="reportedCases">reported cases:
-        </label>
+        <label for="reportedCases">reported cases:</label>
         <input id="reportedCases" data-reported-cases type="number" aria-required="true">
       </div>
       <div class="form-group">
-        <label for="totalHospitalBeds">total hospital beds:
-        </label>
+        <label for="totalHospitalBeds">total hospital beds:</label>
         <input id="totalHospitalBeds" data-total-hospital-beds type="number" aria-required="true">
       </div>
       <div class="form-group">
-        <label for="periodType">Period Type:
-        </label>
+        <label for="periodType">Period Type:</label>
         <input id="periodType" data-period-type type="number" aria-required="true">
       </div>
       <div class="form-group">
-        <label for="timeClass">Get Date:
-        </label>
-        <select name="timeClass">
+        <label for="timeClass">Get Date:</label>
+        <select id="timeClass" name="timeClass">Get Date:
           <option value="days">days</option>
           <option value="weeks">weeks</option>
           <option value="months">months</option>
@@ -53,7 +49,7 @@
       <button data-go-estimate>submit</button>
     </form>
   </section>
-  <section>
+  <section id="s2">
     <table id="table">
       <thead class="output">
         <tr>
