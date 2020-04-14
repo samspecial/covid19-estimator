@@ -76,12 +76,6 @@ select{
   padding:5px;
   background:transparent;
 }
-input#periodType{
-  width:30px;
-}
-select#timeClass{
-  width:100px;
-}
 button  {
   width: 160px;
   height: 40px;
