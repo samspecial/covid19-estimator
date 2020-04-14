@@ -3,12 +3,6 @@
   margin:0;
   box-sizing:border-box;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 section{
   display:flex;
   flex-direction:column;
@@ -21,31 +15,42 @@ padding:50px 0;
 }
 h2{
   color:blue;
+  text-transform:capitalize;
+  font-weight:bold;
+  margin-bottom:50px;
+  text-align: center;
 }
 form{
-  width:30%;
+  width:50%;
   height:fit-content;
   display:flex;
   flex-direction:column;
-  justify-content: space-around;
-  align-items:flex-start;
-  padding:20px 10px;
-  margin:0 auto;
+  box-shadow:0px 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  padding:80px 0;
+  border-radius:10px;
 }
 .form-group{
   margin-bottom:20px;
   display:flex;
   flex-flow:row nowrap;
+  justify-content: center;
+  align-items:space-between;
 }
 label{
 font-size:1rem;
 text-transform:capitalize;
-width:180px;
+width:230px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 input{
-  outline:none;
   height:30px;
   width:150px;
+  padding:0 5px;
+  display:block;
 }
 select{
   width:150px;
@@ -55,17 +60,128 @@ select{
 }
 
 button  {
-  width: 200px;
-  height: 50px;
+  width: 160px;
+  height: 40px;
   background-color:  blue;
   color: #ffffff;
-  font-size:1rem;
+  font-size:0.85rem;
   border-radius:25px;
   border:none;
   font-weight:bold;
   text-transform: capitalize;
+  cursor: pointer;
+  margin:10px auto;
+
 }
 button:focus{
   background-color: rgb(192, 199, 209);
   outline:none;
-} 
+}
+button:hover{
+  background-color: rgb(95, 131, 182);
+  outline:none;
+  color:blue;
+}  
+
+#table{
+  width:50%;
+  margin-top:2rem;
+  border-collapse: collapse;
+  border-spacing:0;
+  border:0.5px solid red;
+}
+#table thead th{
+  text-transform: uppercase;
+  padding:0.5rem;
+  text-align: center;
+  font-size:0.75rem; 
+}
+#table thead.output, .output{
+  border:0.5px solid red;
+}
+#table tbody tr td{
+text-align: center;
+padding:0.5rem 0.8rem;
+text-transform:capitalize;
+border:0.5px solid red;
+font-size:0.75rem;
+}
+#table tbody tr td:first-child{
+  text-align:left;
+}
+#table tbody td:nth-child(2){
+  color:green;
+  font-weight:bold;
+}
+#table tbody td:nth-child(3){
+  color:red;
+  font-weight:bold;
+}
+#table tbody tr:nth-child(odd){
+  background:rgba(153, 153, 153, 0.618);
+}
+@media only screen and (min-width:481px) and (max-width:768px){
+  section{
+    padding:50px 20px;
+  }
+  form{
+    width:80%;
+    padding:50px 0;
+  }
+  h2{
+    font-size:1rem;
+    margin-bottom:20px;
+  }
+  .form-group{
+    margin-bottom:30px;
+  }
+  label{
+  font-size:0.8rem;
+  width:230px;
+  }
+  #table{
+    width:70%;
+  }
+}
+@media only screen and (max-width:480px){
+  section{
+    padding:50px 10px;
+  }
+  form{
+    width:100%;
+    padding:30px 0;
+    margin:0 auto;
+  }
+  h2{
+    font-size:1rem;
+    margin-bottom:20px;
+  }
+  .form-group{
+    margin-bottom:20px;
+  }
+  label{
+  font-size:0.6rem;
+  width:150px;
+  }
+  input, select{
+    width:120px;
+  }
+  button  {
+    width: 120px;
+    height: 40px;
+    font-size:0.75rem;
+  }
+  
+  #table{
+    width:100%;
+    margin:0 auto;
+  }
+  #table thead th{
+    font-size:0.5rem;
+    padding:0.2rem 0.1rem;
+  }
+  #table tbody tr td{
+    padding:0.2rem 0.1rem;
+    font-size:0.6rem;
+    }
+}
